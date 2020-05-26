@@ -8,7 +8,7 @@ HomeWork 08 - Cloud Native
 2. In order to build calculator's image on docker, it's necessary to access the Tema-06 or Calculator's root directory (where Dockerfile is located) and then run: 
 `docker build -t calculator .`
 3. Since the image is built, run: `sudo docker run -p 8080:8080 calculator`
-4. Now, all you need to do is start the server and access [localhost:8080/](http://localhost:8080/) 
+4. Now, all you need to do is start the server and access [localhost:8888/](http://localhost:8888/) 
 5. To exit, just press `CTRL + C`
 
 ### CALCULATOR WEBAPP 
@@ -20,8 +20,8 @@ HomeWork 08 - Cloud Native
   * exp
 * To execute an operation, follow the pattern below:
   * Example a: 9/3
-  * `localhost:8080/div/9/3` 
+  * `localhost:8888/div/9/3` 
   * Example b: 6-7-8
-  * `localhost:8080/sub/6/7/8` 
+  * `localhost:8888/sub/6/7/8` 
 * To access calculator logs, just enter:
-  * `localhost:8080/logs` 
+  * `localhost:8888/logs` 
