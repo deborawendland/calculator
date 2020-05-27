@@ -16,14 +16,6 @@ apply plugin: 'application'
 apply plugin: 'maven-publish'
 apply plugin: 'maven'
 
-/*plugins {
-    id 'com.jfrog.artifactory'
-    id 'application'
-    id 'java'
-    id 'maven'
-    id 'maven-publish'
-}*/
-
 mainClassName="com.deborawendland.cloud.tema08.app.MainRunner"
 
 version '1.0'
@@ -106,11 +98,6 @@ publishing {
     }
 }
 
-artifactoryPublish {
-    dependsOn jar
-}
-
-
 task fatJar(type: Jar) {
     manifest {
         attributes 'Main-Class': mainClassName
@@ -119,3 +106,9 @@ task fatJar(type: Jar) {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
+
+artifactoryPublish {
+    dependsOn fatJar
+}
+
+
