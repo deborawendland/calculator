@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: Debora Amorim
+Main-Class: com.deborawendland.cloud.tema08.app.MainRunner
